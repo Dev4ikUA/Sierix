@@ -1,0 +1,36 @@
+
+/* Class = "NSMenuItem"; title = "Sierix"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Sierix";
+
+/* Class = "NSMenuItem"; title = "Quit Sierix"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit Sierix";
+
+/* Class = "NSMenuItem"; title = "About Sierix"; ObjectID = "5kV-Vb-Qx5"; */
+"5kV-Vb-Qx5.title" = "About Sierix";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSWindow"; title = "Gemini"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Gemini";
+
+/* Class = "NSButtonCell"; title = "Видалити"; ObjectID = "cell-delete-chat"; */
+"cell-delete-chat.title" = "Delete";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Запитайте Gemini..."; ObjectID = "cell-input"; */
+"cell-input.placeholderString" = "Ask Gemini...";
+
+/* Class = "NSButtonCell"; title = "+ Новий чат"; ObjectID = "cell-new-chat"; */
+"cell-new-chat.title" = "+ New Chat";
+
+/* Class = "NSButtonCell"; title = "Надіслати"; ObjectID = "cell-send"; */
+"cell-send.title" = "Send";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "cell-text-table"; */
+"cell-text-table.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Нещодавні"; ObjectID = "col-chats"; */
+"col-chats.headerCell.title" = "Recent";
+
+/* Class = "NSMenu"; title = "Sierix"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Sierix";

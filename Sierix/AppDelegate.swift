@@ -10,18 +10,24 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-
-
+    
+    var window: NSWindow!
+    var mainViewController: ViewController!
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        let windowRect = NSRect(x: 0, y: 0, width: 850, height: 550)
+        let styleMask: Int = NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask
+        
+        window = NSWindow(contentRect: windowRect, styleMask: styleMask, backing: .Buffered, defer: false)
+        window.center()
+        window.title = "Sierix - Gemini 2.5"
+        
+        mainViewController = ViewController()
+        window.contentViewController = mainViewController
+        window.makeKeyAndOrderFront(nil)
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+    
+    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+        return true
     }
-
-
 }
-

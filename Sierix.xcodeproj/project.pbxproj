@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C744C4D309F71390017BCDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C744C4C309F71390017BCDC /* ViewController.swift */; };
+		1C744C51309F75B90017BCDC /* GeminiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C744C50309F75B90017BCDC /* GeminiClient.swift */; };
+		1C744C57309F8D060017BCDC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C744C56309F8D060017BCDC /* logo.png */; };
+		1C744C58309F8DBE0017BCDC /* logo.png in Sources */ = {isa = PBXBuildFile; fileRef = 1C744C56309F8D060017BCDC /* logo.png */; };
+		1C744C5A309F932B0017BCDC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C744C59309F932B0017BCDC /* icon.png */; };
 		1CEEFC37309F6F590013C421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEEFC36309F6F590013C421 /* AppDelegate.swift */; };
 		1CEEFC39309F6F590013C421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CEEFC38309F6F590013C421 /* Assets.xcassets */; };
 		1CEEFC3C309F6F5A0013C421 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEEFC3A309F6F5A0013C421 /* MainMenu.xib */; };
@@ -32,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C744C4C309F71390017BCDC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C744C50309F75B90017BCDC /* GeminiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeminiClient.swift; sourceTree = "<group>"; };
+		1C744C53309F83F70017BCDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		1C744C56309F8D060017BCDC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1C744C59309F932B0017BCDC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		1CEEFC33309F6F590013C421 /* Sierix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sierix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEEFC36309F6F590013C421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CEEFC38309F6F590013C421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,10 +103,14 @@
 		1CEEFC35309F6F590013C421 /* Sierix */ = {
 			isa = PBXGroup;
 			children = (
+				1C744C59309F932B0017BCDC /* icon.png */,
+				1C744C56309F8D060017BCDC /* logo.png */,
+				1C744C50309F75B90017BCDC /* GeminiClient.swift */,
 				1CEEFC36309F6F590013C421 /* AppDelegate.swift */,
 				1CEEFC38309F6F590013C421 /* Assets.xcassets */,
 				1CEEFC3A309F6F5A0013C421 /* MainMenu.xib */,
 				1CEEFC3D309F6F5A0013C421 /* Info.plist */,
+				1C744C4C309F71390017BCDC /* ViewController.swift */,
 			);
 			path = Sierix;
 			sourceTree = "<group>";
@@ -223,8 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C744C5A309F932B0017BCDC /* icon.png in Resources */,
 				1CEEFC39309F6F590013C421 /* Assets.xcassets in Resources */,
 				1CEEFC3C309F6F5A0013C421 /* MainMenu.xib in Resources */,
+				1C744C57309F8D060017BCDC /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C744C58309F8DBE0017BCDC /* logo.png in Sources */,
+				1C744C4D309F71390017BCDC /* ViewController.swift in Sources */,
+				1C744C51309F75B90017BCDC /* GeminiClient.swift in Sources */,
 				1CEEFC37309F6F590013C421 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +308,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1CEEFC3B309F6F5A0013C421 /* Base */,
+				1C744C53309F83F70017BCDC /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -385,7 +405,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Sierix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SNFLRLeevsunflowerr.Sierix;
+				PRODUCT_BUNDLE_IDENTIFIER = sunflowerr.Sierix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -397,7 +417,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Sierix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SNFLRLeevsunflowerr.Sierix;
+				PRODUCT_BUNDLE_IDENTIFIER = sunflowerr.Sierix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -471,6 +491,7 @@
 				1CEEFC58309F6F5A0013C421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CEEFC59309F6F5A0013C421 /* Build configuration list for PBXNativeTarget "SierixTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +500,7 @@
 				1CEEFC5B309F6F5A0013C421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CEEFC5C309F6F5A0013C421 /* Build configuration list for PBXNativeTarget "SierixUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +509,7 @@
 				1CEEFC5E309F6F5A0013C421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
