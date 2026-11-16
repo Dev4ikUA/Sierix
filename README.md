@@ -20,7 +20,7 @@ Currently available as a **Sigma (rolling) release**.
 | Language | Swift 4.2 |
 | IDE | Xcode 10.1 |
 | API | Google Gemini API |
-| Platform | macOS 10.12+ |
+| Platform | macOS 10.14 |
 
 ## Release Status
 
