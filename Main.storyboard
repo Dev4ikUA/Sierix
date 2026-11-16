@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="WC2-wc-002">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="AP1-sc-001">
+            <objects>
+                <application id="AP2-ap-002" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="MM1-mn-001">
+                        <items>
+                            <menuItem title="Sierix" id="MM2-mi-002">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Sierix" systemMenu="apple" id="MM3-mn-003">
+                                    <items>
+                                        <menuItem title="Hide Sierix" keyEquivalent="h" id="MM4-mi-004">
+                                            <connections>
+                                                <action selector="hide:" target="AP4-fr-004" id="MM4-ac-104"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="MM5-mi-005"/>
+                                        <menuItem title="Quit Sierix" keyEquivalent="q" id="MM6-mi-006">
+                                            <connections>
+                                                <action selector="terminate:" target="AP4-fr-004" id="MM6-ac-106"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Edit" id="ED1-mi-001">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="ED2-mn-002">
+                                    <items>
+                                        <menuItem title="Undo" keyEquivalent="z" id="ED3-mi-003">
+                                            <connections>
+                                                <action selector="undo:" target="AP4-fr-004" id="ED3-ac-103"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="ED4-mi-004"/>
+                                        <menuItem title="Cut" keyEquivalent="x" id="ED5-mi-005">
+                                            <connections>
+                                                <action selector="cut:" target="AP4-fr-004" id="ED5-ac-105"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy" keyEquivalent="c" id="ED6-mi-006">
+                                            <connections>
+                                                <action selector="copy:" target="AP4-fr-004" id="ED6-ac-106"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="ED7-mi-007">
+                                            <connections>
+                                                <action selector="paste:" target="AP4-fr-004" id="ED7-ac-107"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="ED8-mi-008">
+                                            <connections>
+                                                <action selector="selectAll:" target="AP4-fr-004" id="ED8-ac-108"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="WM1-mi-001">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="WM2-mn-002">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="WM3-mi-003">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="AP4-fr-004" id="WM3-ac-103"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Close" keyEquivalent="w" id="WM4-mi-004">
+                                            <connections>
+                                                <action selector="performClose:" target="AP4-fr-004" id="WM4-ac-104"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="AP3-dl-003" id="AP5-ol-005"/>
+                    </connections>
+                </application>
+                <customObject id="AP3-dl-003" customClass="AppDelegate"/>
+                <customObject id="AP4-fr-004" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="-134"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="WC1-sc-001">
+            <objects>
+                <windowController id="WC2-wc-002" sceneMemberID="viewController">
+                    <window key="window" title="Sierix" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="WC3-wn-003">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="980" height="640"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="VC2-vc-002" kind="relationship" relationship="window.shadowedContentViewController" id="WC4-sg-004"/>
+                    </connections>
+                </windowController>
+                <customObject id="WC5-fr-005" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VC1-sc-001">
+            <objects>
+                <viewController id="VC2-vc-002" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="VC3-vw-003">
+                        <rect key="frame" x="0.0" y="0.0" width="980" height="640"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <!-- Sidebar -->
+                            <visualEffectView blendingMode="behindWindow" material="sidebar" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-ef-001">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="640"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SB2-im-002">
+                                        <rect key="frame" x="16" y="578" width="218" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="SB2-ct-202"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="center" imageScaling="proportionallyDown" id="SB2-ic-102"/>
+                                    </imageView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SB3-bt-003">
+                                        <rect key="frame" x="16" y="540" width="218" height="24"/>
+                                        <buttonCell key="cell" type="push" title="+ New chat" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SB3-bc-103">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="newChatClicked:" target="VC2-vc-002" id="SB3-ac-203"/>
+                                        </connections>
+                                    </button>
+                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB5-sv-005">
+                                        <rect key="frame" x="8" y="52" width="234" height="476"/>
+                                        <clipView key="contentView" drawsBackground="NO" id="SB5-cl-105">
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="476"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="custom" rowHeight="28" id="SB5-tv-205">
+                                                    <rect key="frame" x="0.0" y="0.0" width="234" height="476"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <size key="intercellSpacing" width="3" height="2"/>
+                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                    <tableColumns>
+                                                        <tableColumn width="231" minWidth="40" maxWidth="1000" id="SB5-tc-305">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="NO" title="Text Cell" id="SB5-dc-405">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                        </tableColumn>
+                                                    </tableColumns>
+                                                    <nil key="headerView"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="VC2-vc-002" id="SB5-ol-505"/>
+                                                        <outlet property="delegate" destination="VC2-vc-002" id="SB5-ol-506"/>
+                                                    </connections>
+                                                </tableView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="SB5-sc-605">
+                                            <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="SB5-sc-606">
+                                            <rect key="frame" x="-100" y="-100" width="15" height="476"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SB4-bt-004">
+                                        <rect key="frame" x="16" y="16" width="218" height="24"/>
+                                        <buttonCell key="cell" type="push" title="Delete chat" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SB4-bc-104">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="deleteChatClicked:" target="VC2-vc-002" id="SB4-ac-204"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="SB1-ct-201"/>
+                                    <constraint firstItem="SB2-im-002" firstAttribute="top" secondItem="SB1-ef-001" secondAttribute="top" constant="18" id="SB1-ct-202"/>
+                                    <constraint firstItem="SB2-im-002" firstAttribute="leading" secondItem="SB1-ef-001" secondAttribute="leading" constant="16" id="SB1-ct-203"/>
+                                    <constraint firstItem="SB2-im-002" firstAttribute="trailing" secondItem="SB1-ef-001" secondAttribute="trailing" constant="-16" id="SB1-ct-204"/>
+                                    <constraint firstItem="SB3-bt-003" firstAttribute="top" secondItem="SB2-im-002" secondAttribute="bottom" constant="14" id="SB1-ct-205"/>
+                                    <constraint firstItem="SB3-bt-003" firstAttribute="leading" secondItem="SB1-ef-001" secondAttribute="leading" constant="16" id="SB1-ct-206"/>
+                                    <constraint firstItem="SB3-bt-003" firstAttribute="trailing" secondItem="SB1-ef-001" secondAttribute="trailing" constant="-16" id="SB1-ct-207"/>
+                                    <constraint firstItem="SB5-sv-005" firstAttribute="top" secondItem="SB3-bt-003" secondAttribute="bottom" constant="12" id="SB1-ct-208"/>
+                                    <constraint firstItem="SB5-sv-005" firstAttribute="leading" secondItem="SB1-ef-001" secondAttribute="leading" constant="8" id="SB1-ct-209"/>
+                                    <constraint firstItem="SB5-sv-005" firstAttribute="trailing" secondItem="SB1-ef-001" secondAttribute="trailing" constant="-8" id="SB1-ct-210"/>
+                                    <constraint firstItem="SB5-sv-005" firstAttribute="bottom" secondItem="SB4-bt-004" secondAttribute="top" constant="-12" id="SB1-ct-211"/>
+                                    <constraint firstItem="SB4-bt-004" firstAttribute="leading" secondItem="SB1-ef-001" secondAttribute="leading" constant="16" id="SB1-ct-212"/>
+                                    <constraint firstItem="SB4-bt-004" firstAttribute="trailing" secondItem="SB1-ef-001" secondAttribute="trailing" constant="-16" id="SB1-ct-213"/>
+                                    <constraint firstItem="SB4-bt-004" firstAttribute="bottom" secondItem="SB1-ef-001" secondAttribute="bottom" constant="-16" id="SB1-ct-214"/>
+                                </constraints>
+                            </visualEffectView>
+                            <!-- Chat output -->
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN1-sv-001">
+                                <rect key="frame" x="250" y="54" width="730" height="586"/>
+                                <clipView key="contentView" id="MN1-cl-101">
+                                    <rect key="frame" x="0.0" y="0.0" width="730" height="586"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="MN1-tx-201">
+                                            <rect key="frame" x="0.0" y="0.0" width="730" height="586"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="minSize" width="730" height="586"/>
+                                            <size key="maxSize" width="10000000" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="MN1-sc-301">
+                                    <rect key="frame" x="-100" y="-100" width="730" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="MN1-sc-302">
+                                    <rect key="frame" x="714" y="0.0" width="16" height="586"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <!-- Input -->
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MN2-tf-002">
+                                <rect key="frame" x="270" y="20" width="600" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Ask Gemini…" drawsBackground="YES" id="MN2-tc-102">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MN3-bt-003">
+                                <rect key="frame" x="880" y="17" width="80" height="28"/>
+                                <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MN3-bc-103">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="sendClicked:" target="VC2-vc-002" id="MN3-ac-203"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SB1-ef-001" firstAttribute="top" secondItem="VC3-vw-003" secondAttribute="top" id="VC3-ct-301"/>
+                            <constraint firstItem="SB1-ef-001" firstAttribute="leading" secondItem="VC3-vw-003" secondAttribute="leading" id="VC3-ct-302"/>
+                            <constraint firstItem="SB1-ef-001" firstAttribute="bottom" secondItem="VC3-vw-003" secondAttribute="bottom" id="VC3-ct-303"/>
+                            <constraint firstItem="MN1-sv-001" firstAttribute="top" secondItem="VC3-vw-003" secondAttribute="top" id="VC3-ct-304"/>
+                            <constraint firstItem="MN1-sv-001" firstAttribute="leading" secondItem="SB1-ef-001" secondAttribute="trailing" id="VC3-ct-305"/>
+                            <constraint firstItem="MN1-sv-001" firstAttribute="trailing" secondItem="VC3-vw-003" secondAttribute="trailing" id="VC3-ct-306"/>
+                            <constraint firstItem="MN1-sv-001" firstAttribute="bottom" secondItem="MN2-tf-002" secondAttribute="top" constant="-12" id="VC3-ct-307"/>
+                            <constraint firstItem="MN2-tf-002" firstAttribute="leading" secondItem="SB1-ef-001" secondAttribute="trailing" constant="20" id="VC3-ct-308"/>
+                            <constraint firstItem="MN2-tf-002" firstAttribute="bottom" secondItem="VC3-vw-003" secondAttribute="bottom" constant="-20" id="VC3-ct-309"/>
+                            <constraint firstItem="MN2-tf-002" firstAttribute="trailing" secondItem="MN3-bt-003" secondAttribute="leading" constant="-10" id="VC3-ct-310"/>
+                            <constraint firstItem="MN3-bt-003" firstAttribute="trailing" secondItem="VC3-vw-003" secondAttribute="trailing" constant="-20" id="VC3-ct-311"/>
+                            <constraint firstItem="MN3-bt-003" firstAttribute="centerY" secondItem="MN2-tf-002" secondAttribute="centerY" id="VC3-ct-312"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatsTableView" destination="SB5-tv-205" id="VC4-ol-001"/>
+                        <outlet property="inputTextField" destination="MN2-tf-002" id="VC4-ol-002"/>
+                        <outlet property="logoImageView" destination="SB2-im-002" id="VC4-ol-003"/>
+                        <outlet property="outputTextView" destination="MN1-tx-201" id="VC4-ol-004"/>
+                        <outlet property="sendButton" destination="MN3-bt-003" id="VC4-ol-005"/>
+                    </connections>
+                </viewController>
+                <customObject id="VC5-fr-005" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="780"/>
+        </scene>
+    </scenes>
+</document>
